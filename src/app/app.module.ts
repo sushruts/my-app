@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EntityBrowserComponent } from './shared/components/entity-browser/entity-browser.component';
+import { EntityEditorComponent } from './shared/components/entity-editor/entity-editor.component';
+import { EntityGuard } from './shared/services/guards/entity-guard.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    EntityBrowserComponent,
+    EntityEditorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EntityGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
